@@ -852,7 +852,7 @@ text-shadow: none;
 .loginpress-show-love a{
   text-decoration: none;
 }
-.love-postion{
+.love-position{
 	left: 0;
 	padding-left: 20px;
 }

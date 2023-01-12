@@ -31,3 +31,6 @@ function oceanwp_child_enqueue_parent_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+/* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', '__return_false' );
