@@ -11,54 +11,54 @@
     }
 }(function ($, undefined) {
     var priceOptions = {
-            "50_websites": {
-                "1_year": {
-                    "price": 99,
-					"per_month":8.5,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=28"
-                },
-                "2_year": {
-                    "price": 149,
-					"per_month":6.5,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=29"
-                },
-                "lifetime": {
-                    "price": 249,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=30"
-                }
+        "50_websites": {
+            "1_year": {
+                "price": 149,
+                "per_month":12.5,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=43"
             },
-            "500_websites": {
-                "1_year": {
-                    "price": 179,
-					"per_month":15,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=31"
-                },
-                "2_year": {
-                    "price": 269,
-					"per_month":11.5,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=32"
-                },
-                "lifetime": {
-                    "price": 499,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=33"
-                }
+            "2_year": {
+                "price": 229,
+                "per_month":10.0,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=44"
             },
-            "1000_websites": {
-                "1_year": {
-                    "price": 249,
-					"per_month":21,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=34"
-                },
-                "2_year": {
-                    "price": 375,
-					"per_month":16,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=35"
-                },
-                "lifetime": {
-                    "price": 619,
-                    "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=36"
-                }
+            "lifetime": {
+                "price": 389,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=45"
             }
+        },
+        "500_websites": {
+            "1_year": {
+                "price": 279,
+                "per_month":23.5,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=46"
+            },
+            "2_year": {
+                "price": 419,
+                "per_month":17.5,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=47"
+            },
+            "lifetime": {
+                "price": 699,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=48"
+            }
+        },
+        "1000_websites": {
+            "1_year": {
+                "price": 389,
+                "per_month":32.5,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=49"
+            },
+            "2_year": {
+                "price": 585,
+                "per_month":24.5,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=50"
+            },
+            "lifetime": {
+                "price": 959,
+                "link": "https://go.premio.io/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=51"
+            }
+        }
         };
     $(document).ready(function($){
         $('.my-color-field').wpColorPicker();
@@ -160,16 +160,58 @@
 
         function checkForPricingPos() {
             $(".bottom-position").each(function(){
-                if( $(this).offset().top - $(window).scrollTop() - $(window).height() < -3) {
-                    $(this).closest(".price-table").removeClass("is-fixed");
-                    $(this).closest(".price-table").find(".price-table-bottom").prop("style", "");
-                } else {
-                    $(this).closest(".price-table").addClass("is-fixed");
-                    $(this).closest(".price-table").find(".price-table-bottom").css("top", ($(window).height() - 125 )+"px");
-                    $(this).closest(".price-table").find(".price-table-bottom").css("left", $(this).offset().left+"px");
-                    $(this).closest(".price-table").find(".price-table-bottom").outerWidth($(this).closest(".price-table").width());
+                if($(this).closest(".price-table").find(".on-screen-pos").length) {
+                    var toolPos = $(this).closest(".price-table").find(".on-screen-pos").offset().top - $(window).scrollTop() - $(window).height();
+                    if(toolPos < 0) {
+                        if ($(this).offset().top - $(window).scrollTop() - $(window).height() < -3) {
+                            $(this).closest(".price-table").removeClass("is-fixed");
+                            $(this).closest(".price-table").find(".price-table-bottom").prop("style", "");
+                        } else {
+                            $(this).closest(".price-table").addClass("is-fixed");
+                            $(this).closest(".price-table").find(".price-table-bottom").css("top", ($(window).height() - 125) + "px");
+                            $(this).closest(".price-table").find(".price-table-bottom").css("left", $(this).offset().left + "px");
+                            $(this).closest(".price-table").find(".price-table-bottom").outerWidth($(this).closest(".price-table").width());
+                        }
+                    } else {
+                        $(this).closest(".price-table").removeClass("is-fixed");
+                        $(this).closest(".price-table").find(".price-table-bottom").prop("style", "");
+                    }
                 }
             });
+            setTooltipPosition();
+        }
+
+        function setTooltipPosition() {
+            if($(".html-tooltip:not(.no-position)").length) {
+                $(".html-tooltip:not(.no-position)").each(function(){
+                    if($(this).offset().top - $(window).scrollTop() > 540) {
+                        $(this).addClass("top").removeClass("side").removeClass("bottom");
+                        $(this).find(".tooltip-text").attr("style","");
+                        $(this).find(".tooltip-text").removeClass("hide-arrow");
+                    } else if($(window).height() - ($(this).offset().top - $(window).scrollTop()) > 460) {
+                        $(this).addClass("bottom").removeClass("top").removeClass("side");
+                        $(this).find(".tooltip-text").attr("style","");
+                        $(this).find(".tooltip-text").removeClass("hide-arrow");
+                    } else {
+                        $(this).addClass("side").removeClass("top").removeClass("bottom");
+                        if($(this).find(".tooltip-text").length) {
+                            $(this).find(".tooltip-text").attr("style","");
+                            $(this).find(".tooltip-text").removeClass("hide-arrow");
+
+                            if($(this).find(".tooltip-text").offset().top - $(window).scrollTop() - 50 < 0) {
+                                $(this).find(".tooltip-text").css("margin-top", Math.abs($(this).find(".tooltip-text").offset().top - $(window).scrollTop() - 50)+"px");
+                                $(this).find(".tooltip-text").addClass("hide-arrow");
+                            } else {
+                                $(this).find(".tooltip-text").attr("style","");
+                                if(($(this).find(".tooltip-text").offset().top + parseInt($(this).find(".tooltip-text").outerHeight()) - $(window).scrollTop() - $(window).height()) > 0) {
+                                    $(this).find(".tooltip-text").css("margin-top", ((-1)*Math.abs($(this).find(".tooltip-text").offset().top + parseInt($(this).find(".tooltip-text").outerHeight()) - $(window).scrollTop() - $(window).height()) - 10)+"px");
+                                    $(this).find(".tooltip-text").addClass("hide-arrow");
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         }
     });
 }));
