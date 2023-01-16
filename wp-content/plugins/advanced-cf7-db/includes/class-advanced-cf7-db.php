@@ -69,7 +69,7 @@ class Advanced_Cf7_Db {
 	public function __construct() {
 
 		$this->plugin_name = 'advanced-cf7-db';
-		$this->version = '1.9';
+		$this->version = '1.9.2';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -210,6 +210,10 @@ class Advanced_Cf7_Db {
 
 		// Edit Popup file delete
 		$this->loader->add_action('wp_ajax_acf7_db_edit_scr_file_delete',$plugin_admin,'vsz_acf7_db_edit_scr_file_delete');
+
+		//adding filter for version check if php version lessthan 7.4 not send update
+		//added in version 1.9.2
+        $this->loader->add_filter('site_transient_update_plugins',$plugin_admin, 'vsz_acf7_db_check_php_version_callback');
 	}
 
 	/**

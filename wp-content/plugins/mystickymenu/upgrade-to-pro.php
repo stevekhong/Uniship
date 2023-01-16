@@ -1,5 +1,5 @@
 <?php if ( ! defined( 'ABSPATH' ) ) exit;
-$pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=";
+$pro_url = $proURL = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2199&edd_options[price_id]=";
 ?>
 <div class="key-table">
     <div class="modal-upgrade upgrade-block" id="folder-modal">
@@ -33,14 +33,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-top">
                                         <div class="price-head">
                                             <div class="plan-name">Basic</div>
-                                            <div class="plan-price">$25<span>/year</span></div>
+                                            <div class="plan-price">$39<span>/year</span></div>
                                         </div>
-                                      
                                         <div class="plan-center">
-											<div class="price-permonth">Less than <b>$2.5</b>/mo · <b>Billed Annually</b></div>
-											<div class="price-websites">For small website owners</div>
-											<div class="price-offer">Renewals for <b>25% off</b></div>
-										</div>
+                                            <div class="price-permonth">Less than <b>$3.5</b>/mo · <b>Billed Annually</b></div>
+                                            <div class="price-offer">Renewals for <b>25% off</b></div>
+                                        </div>
 									</div>
                                     <div class="price-table-middle">
                                         <ul>
@@ -49,7 +47,7 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
 											<li><a href="javascript:;" class="cus-tooltip">Countdown timer <span class="has-tooltip">*</span><span class="tooltip__content">Add a countdown timer element to your Welcome Bar to increase conversion rate, announce flash sales, and more<img src="<?php echo MYSTICKYMENU_URL ?>/images/countdown.gif" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Send contact form leads to email <span class="has-tooltip">*</span><span class="tooltip__content"> Send contact form leads to your email of choice<img src="<?php echo MYSTICKYMENU_URL ?>/images/contact-lead-ss-1.png" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Show coupons from the top bar <span class="has-tooltip">*</span><span class="tooltip__content">Show sale coupons for your website right from the top bar<img src="<?php echo MYSTICKYMENU_URL ?>/images/show-coupon-ss.png" /></span></a></li>
-                                            <li><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
+                                            <li class="on-screen-pos"><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Devices <span class="has-tooltip">*</span><span class="tooltip__content">You can disable the sticky effect on desktop or mobile</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">CSS style <span class="has-tooltip">*</span><span class="tooltip__content">Add CSS of your own to the sticky menu</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Page targeting <span class="has-tooltip">*</span><span class="tooltip__content">Show/hide the sticky menu on specific pages</span></a></li>
@@ -60,18 +58,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-bottom">
                                         <div class="custom-dd">
                                             <select class="multiple-options">
-                                                <option data-option="1_year" data-header="Renewals for 25% off" data-price="25" data-per-month="2.5" value="<?php echo esc_url($pro_url."22") ?>">
-                                                    <?php esc_html_e("Updates & support for 1 year") ?>
-                                                </option>
-                                                <option data-option="2_year" data-header="For 2 years" data-price="39" data-per-month="2" value="<?php echo esc_url($pro_url."23") ?>">
-                                                    <?php esc_html_e("Updates & support for 2 years") ?>
-                                                </option>
-                                                <option data-option="lifetime" data-header="For lifetime" data-price="79" data-per-month="" value="<?php echo esc_url($pro_url."24") ?>">
-                                                    <?php esc_html_e("Updates & support for lifetime") ?>
-                                                </option>
+                                                <option data-per-month="3.5" data-option="1_year" data-header="Renewals for 25% off" data-price="39" value="<?php echo esc_url($proURL) ?>37">Updates &amp; support for 1 year</option>
+                                                <option data-per-month="2.5" data-option="2_year" data-header="For 2 years" data-price="59" value="<?php echo esc_url($proURL) ?>38">Updates &amp; support for 2 years</option>
+                                                <option data-per-month="0" data-option="lifetime" data-header="For lifetime" data-price="119" value="<?php echo esc_url($proURL) ?>39">Updates &amp; support for lifetime</option>
                                             </select>
                                         </div>
-                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options[price_id]=22">Buy now</a>
+                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options[price_id]=37">Buy now</a>
                                     </div>
 									<div class="bottom-position"></div>
                                 </div>
@@ -81,15 +73,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-top">
                                         <div class="price-head">
                                             <div class="plan-name">Plus</div>
-                                            <div class="plan-price">$59<span>/year</span></div>
+                                            <div class="plan-price">$89<span>/year</span></div>
                                         </div>
-                                        
-										<div class="plan-center">
-											<div class="price-permonth">Less than <b>$5</b>/mo · <b>Billed Annually</b></div>
-											<div class="price-websites">For businesses with multiple websites</div>
-											<div class="price-offer">Renewals for <b>25% off</b></div>
-										</div>
-                                        
+                                        <div class="plan-center">
+                                            <div class="price-permonth">Less than <b>$7.5</b>/mo · <b>Billed Annually</b></div>
+                                            <div class="price-offer">Renewals for <b>25% off</b></div>
+                                        </div>
                                     </div>
                                     <div class="price-table-middle">
                                         <ul>
@@ -98,7 +87,7 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
 											<li><a href="javascript:;" class="cus-tooltip">Countdown timer <span class="has-tooltip">*</span><span class="tooltip__content">Add a countdown timer element to your Welcome Bar to increase conversion rate, announce flash sales, and more<img src="<?php echo MYSTICKYMENU_URL ?>/images/countdown.gif" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Send contact form leads to email <span class="has-tooltip">*</span><span class="tooltip__content"> Send contact form leads to your email of choice<img src="<?php echo MYSTICKYMENU_URL ?>/images/contact-lead-ss-1.png" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Show coupons from the top bar <span class="has-tooltip">*</span><span class="tooltip__content">Show sale coupons for your website right from the top bar<img src="<?php echo MYSTICKYMENU_URL ?>/images/show-coupon-ss.png" /></span></a></li>
-                                            <li><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
+                                            <li class="on-screen-pos"><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Devices <span class="has-tooltip">*</span><span class="tooltip__content">You can disable the sticky effect on desktop or mobile</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">CSS style <span class="has-tooltip">*</span><span class="tooltip__content">Add CSS of your own to the sticky menu</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Page targeting <span class="has-tooltip">*</span><span class="tooltip__content">Show/hide the sticky menu on specific pages</span></a></li>
@@ -109,18 +98,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-bottom">
                                         <div class="custom-dd">
                                             <select class="multiple-options">
-                                                <option data-option="1_year" data-header="Renewals for 25% off" data-price="59" data-per-month="5" value="<?php echo esc_url($pro_url."25") ?>">
-                                                    <?php esc_html_e("Updates & support for 1 year") ?>
-                                                </option>
-                                                <option data-option="2_year" data-header="For 2 years" data-price="89" data-per-month="4" value="<?php echo esc_url($pro_url."26") ?>">
-                                                    <?php esc_html_e("Updates & support for 2 years") ?>
-                                                </option>
-                                                <option data-option="lifetime" data-header="For lifetime" data-price="149" data-per-month="6.5"  value="<?php echo esc_url($pro_url."27") ?>">
-                                                    <?php esc_html_e("Updates & support for lifetime") ?>
-                                                </option>
+                                                <option data-per-month="7.5" data-option="1_year" data-header="Renewals for 25% off" data-price="89" value="<?php echo esc_url($proURL) ?>40">Updates &amp; support for 1 year</option>
+                                                <option data-per-month="6.0" data-option="2_year" data-header="For 2 years" data-price="139" value="<?php echo esc_url($proURL) ?>41">Updates &amp; support for 2 years</option>
+                                                <option data-per-month="" data-option="lifetime" data-header="For lifetime" data-price="229" value="<?php echo esc_url($proURL) ?>42">Updates &amp; support for lifetime</option>
                                             </select>
                                         </div>
-                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options%5Bprice_id%5D=25">Buy now</a>
+                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options%5Bprice_id%5D=40">Buy now</a>
                                     </div>
 									<div class="bottom-position"></div>
                                 </div>
@@ -130,15 +113,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-top">
                                         <div class="price-head">
                                             <div class="plan-name">Agency</div>
-                                            <div class="plan-price">$99<span>/year</span></div>
+                                            <div class="plan-price">$149<span>/year</span></div>
                                         </div>
-                                        
-										<div class="plan-center">
-											<div class="price-permonth">Less than <b>$8.5</b>/mo · <b>Billed Annually</b></div>
-											<div class="price-websites">For agencies who manage clients</div>
-											<div class="price-offer">Renewals for <b>25% off</b></div>
-										</div>
-                                        
+                                        <div class="plan-center">
+                                            <div class="price-permonth">Less than <b>$12.5</b>/mo · <b>Billed Annually</b></div>
+                                            <div class="price-offer">Renewals for <b>25% off</b></div>
+                                        </div>
                                     </div>
                                     <div class="price-table-middle">
                                         <ul>
@@ -155,7 +135,7 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
 											<li><a href="javascript:;" class="cus-tooltip">Countdown timer <span class="has-tooltip">*</span><span class="tooltip__content right_tooltip">Add a countdown timer element to your Welcome Bar to increase conversion rate, announce flash sales, and more<img src="<?php echo MYSTICKYMENU_URL ?>/images/countdown.gif" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Send contact form leads to email <span class="has-tooltip">*</span><span class="tooltip__content right_tooltip"> Send contact form leads to your email of choice<img src="<?php echo MYSTICKYMENU_URL ?>/images/contact-lead-ss-1.png" /></span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Show coupons from the top bar <span class="has-tooltip">*</span><span class="tooltip__content right_tooltip">Show sale coupons for your website right from the top bar<img src="<?php echo MYSTICKYMENU_URL ?>/images/show-coupon-ss.png" /></span></a></li>
-                                            <li><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
+                                            <li class="on-screen-pos"><a href="javascript:;" class="cus-tooltip">Show on scroll up/down <span class="has-tooltip">*</span><span class="tooltip__content">You can show the menu when scrolling up, down or both</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Devices <span class="has-tooltip">*</span><span class="tooltip__content">You can disable the sticky effect on desktop or mobile</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">CSS style <span class="has-tooltip">*</span><span class="tooltip__content">Add CSS of your own to the sticky menu</span></a></li>
                                             <li><a href="javascript:;" class="cus-tooltip">Page targeting <span class="has-tooltip">*</span><span class="tooltip__content">Show/hide the sticky menu on specific pages</span></a></li>
@@ -166,18 +146,12 @@ $pro_url = "https://go.premio.io/checkount/?edd_action=add_to_cart&download_id=2
                                     <div class="price-table-bottom">
                                         <div class="custom-dd">
                                             <select class="multiple-options has-multiple-websites">
-                                                <option data-option="1_year" data-header="Renewals for 25% off" data-price="79" value="<?php echo esc_url($pro_url."28") ?>">
-                                                    <?php esc_html_e("Updates & support for 1 year") ?>
-                                                </option>
-                                                <option data-option="2_year" data-header="For 2 years" data-price="125" value="<?php echo esc_url($pro_url."29") ?>">
-                                                    <?php esc_html_e("Updates & support for 2 years") ?>
-                                                </option>
-                                                <option data-option="lifetime" data-header="For lifetime" data-price="199" value="<?php echo esc_url($pro_url."30") ?>">
-                                                    <?php esc_html_e("Updates & support for lifetime") ?>
-                                                </option>
+                                                <option data-per-month="12.5" data-option="1_year" data-header="Renewals for 25% off" data-price="149" value="<?php echo esc_url($proURL) ?>43">Updates &amp; support for 1 year</option>
+                                                <option data-per-month="7.5" data-option="2_year" data-header="For 2 years" data-price="229" value="<?php echo esc_url($proURL) ?>44">Updates &amp; support for 2 years</option>
+                                                <option data-per-month="" data-option="lifetime" data-header="For lifetime" data-price="389" value="<?php echo esc_url($proURL) ?>45">Updates &amp; support for lifetime</option>
                                             </select>
                                         </div>
-                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options%5Bprice_id%5D=28">Buy now</a>
+                                        <a class="cart-link" target="_blank" href="https://go.premio.io/?edd_action=add_to_cart&amp;download_id=2199&amp;edd_options%5Bprice_id%5D=43">Buy now</a>
                                     </div>
 									<div class="bottom-position"></div>
                                 </div>
