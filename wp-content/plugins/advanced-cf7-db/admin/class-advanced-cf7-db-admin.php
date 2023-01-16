@@ -1391,6 +1391,17 @@ class Advanced_Cf7_Db_Admin {
 		}
 	}
 
+	//added in version 1.9.2
+	//adding filter for version check if php version lessthan 7.4 or greaterthan or equals 8.1 then not send update
+	function vsz_acf7_db_check_php_version_callback($value){
+
+		if (version_compare(PHP_VERSION, '7.4', '<') || version_compare(PHP_VERSION, '8.1', '>='))
+		{
+			unset( $value->response['advanced-cf7-db/advanced-cf7-db.php'] );
+	    }
+	    return $value;
+	}
+
 }//close class
 
 /**
