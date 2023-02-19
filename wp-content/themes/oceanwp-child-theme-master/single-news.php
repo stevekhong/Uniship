@@ -1,6 +1,12 @@
 <?php
 get_header(); ?>
 
+<style>
+    #right-sidebar {
+        display: none;
+    }
+</style>
+
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
 	<div id="content-wrap" class="container clr">
@@ -65,9 +71,3 @@ get_header(); ?>
 	<?php do_action( 'ocean_after_content_wrap' ); ?>
 
 <?php get_footer(); ?>
-
-<style>
-    #right-sidebar {
-        display: none;
-    }
-</style>
