@@ -82,6 +82,8 @@
         print_r( $content );
     }
 
+    add_shortcode('schedules', 'getAllSchedules');
+
     // get news
     function getAllNews() {
         $content = '';
