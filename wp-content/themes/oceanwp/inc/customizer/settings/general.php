@@ -796,7 +796,7 @@ if ( ! class_exists( 'OceanWP_General_Customizer' ) ) :
 			$wp_customize->add_setting(
 				'ocean_page_single_layout',
 				array(
-					'default'           => 'right-sidebar',
+					// 'default'           => 'right-sidebar',
 					'sanitize_callback' => 'oceanwp_sanitize_select',
 				)
 			);
