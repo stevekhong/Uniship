@@ -301,4 +301,8 @@ body {
     .oceanwp-mobile-menu-icon a:hover {
         color: #193cdb !important;
     }
+
+    .about-contact-us {
+        margin-left: 20px;
+    }
 }
