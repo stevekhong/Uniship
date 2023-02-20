@@ -199,6 +199,10 @@ body {
     position: fixed !important;
 }
 
+.about-contact-us {
+    margin-left: 200px;
+}
+
 .contact-us-link {
     background-color: #f99d20;
     color: #ffffff;
