@@ -32,6 +32,13 @@ body {
 	font-family: 'AvertaStd' !important;
 }
 
+.homepage-heading {
+    text-align: left; 
+    color: #ffffff; 
+    font-size: 5rem; 
+    line-height: 2rem;
+}
+
 .elementor-240 .elementor-element.elementor-element-yqf7coq {
     margin-bottom: 0px !important;
 }
@@ -42,6 +49,15 @@ body {
 
 #site-logo #site-logo-inner a img {
     width: 350px !important;
+}
+
+#footer {
+    background-color: #2e3b42;
+}
+
+#footer-widgets {
+    width: 1080px;
+    margin: 0 auto;
 }
 
 #footer-widgets > .footer-widgets-inner {
@@ -285,7 +301,107 @@ body {
     color: #13aff0;
 }
 
+.uc_image_carousel_container_holder {
+    margin: 0 auto !important;
+    width: 80%;
+    display: flex;
+}
+
+.uc_image_carousel_placeholder > a > div {
+    width: 500px;
+}
+
+.uc_image_carousel_content > a > .uc_post_title {
+    margin-top: 0 !important;
+}
+
+.owl-nav {
+    top: 40% !important;
+}
+
+.owl-nav > .owl-prev, .owl-nav > .owl-next {
+    text-shadow: 2px 2px 5px #707070;
+}
+
+.owl-nav > .owl-prev {
+    left: 50px !important;
+}
+
+.owl-nav > .owl-next {
+    right: 50px !important;
+}
+
+#content-wrap {
+    width: 100% !important;
+    max-width: unset !important;
+}
+
+label {
+    font-weight: 900;
+}
+
+.form-name {
+    display: flex;
+}
+
+.form-fname {
+    width: 50%;
+    float: left;
+    padding-right: 5px;
+    align-self: flex-end;
+}
+
+.form-lname {
+    width: 50%;
+    float: right;
+    padding-left: 5px;
+    align-self: flex-end;
+}
+
+.form-fname input, .form-lname input, .form-email input, .form-message textarea {
+    background-color: #ffffff !important;
+}
+
+.form-message textarea {
+    resize: none;
+}
+
+.form-submit input {
+    width: 100%;
+    background-color: #f99d20 !important;
+    color: #ffffff !important;   
+}
+
+.contact-form-section > .elementor-container {
+    max-width: 1140px;
+}
+
+.elementor-widget-container > ul > li > a {
+    color: #5671EF;
+}
+
+.elementor-widget-container > ul > li > a:hover {
+    color: #5671EF;
+}
+
+.penang-list > .elementor-widget-container > ul > li:first-child > .elementor-icon-list-icon,
+.jb-list > .elementor-widget-container > ul > li:first-child > .elementor-icon-list-icon {
+    margin-top: -25px;
+}
+
+.kuantan-list > .elementor-widget-container > ul > li:first-child > .elementor-icon-list-icon {
+    margin-top: -80px;
+}
+
+.kv-list > .elementor-widget-container > ul > li:first-child > .elementor-icon-list-icon {
+    margin-top: -55px;
+}
+
 @media ( max-width: 575px ) {
+    .homepage-heading { 
+        line-height: 5rem !important;
+    }
+    
     #site-logo #site-logo-inner a img, #site-header.center-header #site-navigation-wrap .middle-site-logo a img {
         max-width: 250px;
     }
@@ -308,5 +424,54 @@ body {
 
     .about-contact-us {
         margin-left: 20px;
+    }
+
+    .uc_image_carousel_container_holder {
+        margin: 0 auto !important;
+        display: unset !important;
+    }
+
+    .owl-nav > .owl-prev {
+        left: 0 !important;
+    }
+    
+    .owl-nav > .owl-next {
+        right: 0 !important;
+    }
+
+    .elementor-240 .elementor-element.elementor-element-2oppmnf .elementor-heading-title {
+        font-size: 25px !important;
+        text-align: left !important;
+    }
+
+    .elementor-240 .elementor-element.elementor-element-se2hi8r {
+        text-align: left !important;
+    }
+
+    .elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-oredo4r {
+        order: 2 !important;
+        padding-top: 20px;
+    }
+
+    .footer-widget > .textwidget > p {
+        text-align: center !important;
+    }
+
+    #footer-widgets .col {
+        margin-bottom: 0;
+    }
+
+    .footer-box > #block-14 > p {
+        text-align: center !important;
+    }
+
+    #footer-widgets .col-2 {
+        min-height: 100px;
+    }
+
+    #block-15 > .certified-by {
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
     }
 }
