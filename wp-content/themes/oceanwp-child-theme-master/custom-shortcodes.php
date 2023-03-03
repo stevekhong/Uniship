@@ -122,6 +122,54 @@
 
     add_shortcode('news', 'getAllNews');
 
+    // get news
+    function getAllMilestones() {
+        $content = '';
+        $args = array(
+            'post_type'      => 'milestones',
+            'posts_per_page' => -1,
+            'post_status'    => 'publish',
+            // 'meta_key'       => 'order',
+            // 'meta_type'      => 'NUMERIC',
+            'orderby'        => [
+                 'milestone_month' => 'ASC',
+                 'milestone_year' => 'ASC',
+            ],
+        );
+
+        $milestones = new WP_Query( $args );
+
+        $months = array( 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' );
+
+        // var_dump( $milestones );
+        
+        if ( $milestones->have_posts() ) {
+            $content .= '<div id="milestones">';
+            while( $milestones->have_posts() ) {
+                $milestones->the_post();
+
+                $content .= '<div class="milestones-item">';
+                $content .= '<div class="milestones-org-bar"><img src="/wp-content/uploads/2023/03/shim.png" /><div class="milestone-org-circle"><img src="/wp-content/uploads/2023/03/org-circle.png" /></div></div>';
+                $content .= '<div class="milestones-date"><span>' . $months[get_field( 'milestone_month', get_the_ID() )] . '</span> ' . get_field( 'milestone_year', get_the_ID() ) . '</div>';
+                $content .= '<div class="milestones-title">' . get_the_title() . '</div>';
+                $content .= '<div class="milestones-text">' . get_the_content() . '</div>';
+
+                if( get_post_thumbnail_id( get_the_ID() ) ) {
+                    $content .= '<div class="milestones-img"><img src="' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '?v=03032023" alt="' . get_the_title() . '" /></div>';
+                }
+
+                $content .= '</div>';
+            }
+            wp_reset_postdata();
+
+            $content .= '</div>';
+        }
+
+        print_r( $content );
+    }
+
+    add_shortcode('milestones', 'getAllMilestones');
+
     // shortcode for custom menu// Function that will return our Wordpress menu
     function list_menu( $atts, $content = null ) {
         extract( shortcode_atts( array(  
