@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<?php do_action( 'ocean_before_content_wrap' ); ?>
 
-	<div id="content-wrap" class="container clr">
+	<div id="content-wrap" class="container clr news-single">
 
 		<?php do_action( 'ocean_before_primary' ); ?>
 
@@ -47,6 +47,7 @@ get_header(); ?>
 						} else {
 
 							// All other post types.
+							echo '<div class="news-post-image" style="background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . ');" /></div>';
 							get_template_part( 'partials/single/layout', get_post_type() );
 
 						}
