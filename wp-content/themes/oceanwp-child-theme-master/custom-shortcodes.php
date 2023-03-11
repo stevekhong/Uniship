@@ -106,8 +106,8 @@
                 $news->the_post();
 
                 $content .= '<li class="news-list-item">';
-                $content .= '<div class="news-img"><img src="' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '" alt="' . get_the_title() . '"></div>';
-                $content .= '<div class="news-title">' . get_the_title() . '</div>';
+                $content .= '<div class="news-img"><a href="' . get_permalink() . '"><img src="' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '" alt="' . get_the_title() . '"></a></div>';
+                $content .= '<div class="news-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></div>';
                 $content .= '<div class="news-text">' . wp_trim_words( get_the_content(), 40, '...' ) . '</div>';
                 $content .= '<div class="news-readmore-btn"><a href="' . get_permalink() . '">Read More</a></div>';
                 $content .= '</li>';

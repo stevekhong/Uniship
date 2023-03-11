@@ -100,6 +100,12 @@ body {
     width: 100%;
 }
 
+.footer-widget > .textwidget > h5 {
+    color: #ffffff; 
+    letter-spacing: 2px; 
+    text-align: left;
+}
+
 #footer-bottom #copyright {
     font-size: 8px !important;
     font-family: "AvertaStd";
@@ -262,6 +268,13 @@ body {
     color: #f99d20;
 }
 
+.news-single > .content-area {
+    float: unset !important;
+    margin: 0 auto;
+    border: 0;
+    padding-left: 30px; 
+}
+
 #news-list {
     list-style-type: none;
 }
@@ -282,6 +295,10 @@ body {
     margin-bottom: 20px;
 }
 
+#news-list > .news-list-item > .news-title a:hover {
+    color: #193cdb;
+}
+
 #news-list > .news-list-item > .news-text {
     color: #707070;
     margin-bottom: 20px;
@@ -299,6 +316,13 @@ body {
 
 #news-list > .news-list-item > .news-readmore-btn > a:hover {
     color: #13aff0;
+}
+
+.news-post-image {
+    height: 300px;
+    margin-bottom: 20px;
+    background-position: center center;
+    background-size: cover;
 }
 
 .uc_image_carousel_container_holder {
@@ -486,6 +510,36 @@ label {
     max-width: 40px !important;
 }
 
+.lets-talk > .elementor-widget-wrap.elementor-element-populated {
+    /* align-content: unset !important; */
+    align-self: center;
+    height: 320px;
+}
+
+.our-commitment-img {
+    float: right;
+}
+
+.our-commitment-block  > .elementor-container {
+    display: block !important;
+}
+
+.our-commitment {
+    padding-top: 80px;
+}
+
+.services-section-2 > .elementor-container, .services-section-4 > .elementor-container {
+    display: block !important;
+}
+
+.services-section-2-img, .services-section-4-img {
+    float: right !important;
+}
+
+.services-section-2-text, .services-section-4-text {
+    padding-top: 80px;
+}
+
 @media ( max-width: 575px ) {
     .homepage-heading { 
         line-height: 5rem !important;
@@ -508,7 +562,23 @@ label {
     }
 
     .oceanwp-mobile-menu-icon a:hover {
-        color: #193cdb !important;
+        color: #2e3b42 !important;
+    }
+
+    #mobile-dropdown {
+        background-color: #2e3b42 !important;
+    }
+
+    #mobile-dropdown ul li {
+        border-color: #76909e !important;
+    }
+
+    #mobile-dropdown #mobile-menu-search form input {
+        color: #000;
+    }
+
+    #mobile-dropdown #mobile-menu-search form input {
+        border-color: #2e3b42;
     }
 
     .about-contact-us {
@@ -542,8 +612,16 @@ label {
         padding-top: 20px;
     }
 
+    #footer-widgets {
+        width: 100% !important;
+    }
+
     .footer-widget > .textwidget > p {
         text-align: center !important;
+    }
+
+    .footer-widget > .textwidget > h5 {
+        text-align: center;
     }
 
     #footer-widgets .col {
@@ -562,5 +640,84 @@ label {
         text-align: center;
         width: 100%;
         margin-left: 0;
+    }
+
+    .lets-talk > .elementor-widget-wrap.elementor-element-populated {
+        padding: 0 !important;
+        align-content: center !important;
+    }
+
+    .lets-talk .left-org-box {
+        width: 30% !important;
+    }
+
+    .lets-talk .right-blue-box {
+        width: 70% !important;
+    }
+
+    .pg-box, .kn-box, .kv-box, .jb-box {
+        margin-bottom: 20px;
+    }
+
+    .contact-info-sec1 {
+        margin-bottom: 0 !important;
+    }
+
+    .our-commitment > .elementor-widget-wrap {
+        padding-top: 30px  !important;
+    }
+
+    .our-commitment {
+        padding-top: unset;
+    }
+
+    .co-milestones-blue-box {
+        width: 30% !important;
+    }
+
+    .co-milestones-org-box {
+        width: 70% !important;
+    }
+
+    #milestones > .slick-prev{
+        left: 0;
+    }
+
+    #milestones > .slick-next{
+        right: 0;
+    }
+
+    /* .services-section-2 > .elementor-container, .services-section-4 > .elementor-container {
+        display: block !important;
+    }
+    
+    .services-section-2-img, .services-section-4-img {
+        float: right !important;
+    } */
+    
+    .services-section-2-text, .services-section-4-text {
+        padding-top: unset;
+    }
+
+    .services-section-1-text > .elementor-widget-wrap,
+    .services-section-2-text > .elementor-widget-wrap,
+    .services-section-3-text > .elementor-widget-wrap,
+    .services-section-4-text > .elementor-widget-wrap,
+    .services-section-5-text > .elementor-widget-wrap {
+        padding-top: 30px  !important;
+    }
+
+    #news-list {
+        margin-left: 0 !important;
+    }
+
+    #news-list > .news-list-item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .news-single > #primary > #content {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
