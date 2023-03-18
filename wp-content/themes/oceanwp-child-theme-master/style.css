@@ -111,12 +111,21 @@ body {
     font-family: "AvertaStd";
 }
 
-.cust-review-card {
+#cust-reviews {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#cust-reviews .slick-list {
+    min-height: 360px;
+}
+
+#cust-reviews .cust-review-card {
     display: flex;
 }
 
-.cust-review-card > .card {
-    width: 100%; 
+#cust-reviews .card {
+    /* width: 32% !important;  */
     background-color: #f99d20;
     border: 0;
     position: relative;
@@ -124,15 +133,20 @@ body {
     display: flex;
     align-items: stretch;
     justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.cust-review-card > .card > .card-body {
+#cust-reviews .card-body {
+    width: 100%;
+    min-height: 250px;
     background-color: #ffffff;
-    padding: 50px 20px 20px 20px;
+    padding: 50px 30px 20px 30px;
     align-items: stretch;
+    text-align: center;
 }
 
-.cust-review-card > .card > .card-img-div {
+#cust-reviews .card-img-div {
     position:absolute;
     top: 70px;
     left: 50%;
@@ -142,16 +156,38 @@ body {
     overflow: hidden;
 }
 
-.cust-review-card > .card > .card-img-div > .card-img-top {
+#cust-reviews .card-img-top {
     position: static;
 }
 
-.cust-review-card > .card > .card-body > .card-text {
+#cust-reviews .card-title {
+    margin-bottom: 0px !important;
+}
+
+#cust-reviews .card-text {
     line-height: 1.6em;
     font-size: 10px !important;
     position: relative;
     width: 100%;
     display: block;
+}
+
+#cust-reviews .slick-prev, #cust-reviews .slick-next {
+    z-index: 9999;
+}
+
+#cust-reviews > .slick-prev:before {
+    color: #000;
+    content: "\f060";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+#cust-reviews .slick-next:before {
+    color: #000;
+    content: "\f061";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
 }
 
 .elementor-240 .elementor-element.elementor-element-47f4413 > .elementor-widget-container {
