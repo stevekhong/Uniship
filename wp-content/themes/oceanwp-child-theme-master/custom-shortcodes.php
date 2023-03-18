@@ -16,7 +16,7 @@
         $content = '';
         $args = array(
             'post_type'      => 'customers',
-            'posts_per_page' => 3,
+            'posts_per_page' => -1,
             'post_status' => 'publish',
             'orderby' => 'rand',
         );
@@ -24,7 +24,7 @@
         $customers = new WP_Query($args);
         
         if ( $customers->have_posts() ) {
-            $content .= '<div class="container-fluid">';
+            /*$content .= '<div class="container-fluid">';
             $content .= '<div class="row g-0 justify-content-center">';
             while( $customers->have_posts() ) {
                 $customers->the_post();
@@ -38,10 +38,24 @@
                 $content .= '</div>';
                 $content .= '</div>';
                 $content .= '</div>';
+            }*/
+
+            $content .= '<div id="cust-reviews">';
+
+            while( $customers->have_posts() ) {
+                $customers->the_post();
+                $content .= '<div class="card shadow">';
+                $content .= '<div class="rounded-circle shadow card-img-div border"><img src="' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '" class="card-img-top" alt="' . get_the_title() . '"></div>';
+                $content .= '<div class="card-body">';
+                $content .= '<h4 class="card-title">' . get_the_title() . '</h4>';
+                $content .= '<p class="card-position">' . get_post_meta( get_the_ID(), 'position', true ) . '</p>';
+                $content .= '<p class="card-text">"' . get_the_content() . '"</p>';
+                $content .= '</div>';
+                $content .= '</div>';
             }
+
             wp_reset_postdata();
 
-            $content .= '</div>';
             $content .= '</div>';
         }
 
